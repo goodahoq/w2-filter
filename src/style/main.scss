@@ -1,0 +1,102 @@
+@import './base/color';
+@import './base/spacing';
+body {
+  background-color: $grey1;
+  font-family: Roboto;
+}
+
+.navBar__searchBar-content {
+  display: inline-block;
+  width: 50%;
+  background-color: $purple-main;
+  font-size: 16px;
+  color: #000;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+#App {
+  .navBar {
+    padding: 24px;
+    background-color: $purple-main;
+  }
+  .navBar__pic {
+    padding: 0px 48px;
+    ;
+  }
+  .navBar__search {}
+  .filterOption {
+    background-color: $grey2;
+  }
+  .filterOption__detail {
+    border-bottom: 1px solid $grey3;
+    padding: 24px 0;
+  }
+  .filterOption__detail-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 8px 0px;
+  }
+  .conditionsList-text {
+    font-size: 24px;
+  }
+  .showConditions-number {
+    font-weight: bold;
+    color: $purple-main;
+  }
+  .showConditions {
+    padding: 10px 0;
+  }
+  .showConditions-condition {
+    cursor: pointer;
+    color: $purple-sub;
+    padding: 5px 15px;
+    font-style: italic;
+    border: 1px solid $purple-sub;
+    border-radius: 20px;
+    &:hover {
+      color: #fff;
+      background-color: $purple-sub;
+    }
+  }
+  .showResult__card {
+    padding: 12px;
+  }
+  .showResult__card-shadow {
+    &:hover {
+      box-shadow: 2px 2px 10px 2px $grey3;
+    }
+  }
+  .showResult__card-content {
+    background-color: #fff;
+  }
+  .showResult__card-detail {
+    cursor: pointer;
+    padding: 15px 10px 0px 24px;
+  }
+  .showResult__card-introduction {
+    h2 {
+      font-weight: bold;
+      font-size: 24px;
+      color: $purple-sub;
+    }
+    p {
+      font-weight: normal;
+      font-size: 16px;
+    }
+  }
+  .showResult__card-aut {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .showResult__card-contition {
+    color: #fff;
+    font-style: italic;
+    background-color: $grey3;
+    border-radius: 20px;
+    padding: 2px 16px;
+  }
+  .showResult__card-locText {
+    color: $grey4;
+  }
+}

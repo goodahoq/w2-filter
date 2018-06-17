@@ -1,0 +1,28 @@
+@for $i from 0 through 20 {
+  @each $prop,
+  $abbrev in (margin: m, padding: p) {
+    .#{$abbrev}#{$i*5} {
+      #{$prop}: $i*5px !important;
+    }
+    .#{$abbrev}T#{$i*5} {
+      #{$prop}-top: $i*5px !important;
+    }
+    .#{$abbrev}B#{$i*5} {
+      #{$prop}-bottom: $i*5px !important;
+    }
+    .#{$abbrev}L#{$i*5} {
+      #{$prop}-left: $i*5px !important;
+    }
+    .#{$abbrev}R#{$i*5} {
+      #{$prop}-right: $i*5px !important;
+    }
+  }
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w80 {
+  width: 80%;
+}
