@@ -103,8 +103,8 @@
   opacity: 0;
 }
 
-.modal-enter .map-container,
-.modal-leave-active .map-container {
+.modal-enter .mapContainer,
+.modal-leave-active .mapContainer {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
