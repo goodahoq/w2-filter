@@ -1,0 +1,28 @@
+@import './color';
+body,
+html {
+  font-size: 18px;
+  color: $font;
+  background: $bg;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 auto;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+@mixin flex($alignItem: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+}
+
+$md: 991px;
+$sm: 768px;
+$xs: 478px;

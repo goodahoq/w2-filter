@@ -1,0 +1,92 @@
+@import './base/color';
+@import './base/app';
+.bikeCard-container {
+  flex: 3;
+  margin-top: 15px;
+  margin-left: 20px;
+  @media (max-width: $md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.bikeCard {
+  margin: 15px 0px 15px 0px;
+  min-height: 300px;
+}
+
+.cardContainer {
+  color: rgba($font, 0.8);
+  height: 100%;
+  background: $w;
+  border: 2px solid rgba($secondary, 0.8);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    box-shadow: 0 5px 10px rgba($grey4, .5);
+    transform: translateY(-3px);
+  }
+  .titleBody {
+    padding: 10px 15px;
+    flex: 2;
+    .title {
+      color: $font;
+      font-size: 24px;
+    }
+    .title_en {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  .districtBody {
+    padding: 10px 15px;
+    flex: 1;
+    .district {
+      width: fit-content;
+      background-color: $primary;
+      border-radius: 4px;
+      color: $w;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 300;
+      .district_en {
+        font-weight: 200;
+      }
+    }
+  }
+  .addressBody {
+    padding: 10px 15px;
+    border-bottom: 2px solid $secondary;
+    flex: 2;
+    .address {
+      color: $font;
+      font-size: 16px;
+    }
+    .address_en {
+      font-size: 12px;
+    }
+  }
+  .statusBody {
+    text-align: center;
+    padding: 10px 15px;
+    flex: 3;
+    display: flex;
+    .leftNum {
+      flex: 1;
+      .leftTitle {
+        font-size: 14px;
+      }
+    }
+    .vacancyNum {
+      flex: 1;
+      .vacancyTitle {
+        font-size: 14px;
+      }
+    }
+    .num {
+      font-size: 36px;
+    }
+  }
+}

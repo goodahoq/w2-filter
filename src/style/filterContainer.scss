@@ -1,0 +1,111 @@
+@import './base/color';
+@import './base/app';
+.filterPannel {
+  flex: 1;
+  position: sticky;
+  height: fit-content;
+  top: 80px;
+  left: 0;
+  margin: 14px;
+  margin-top: 60px;
+  background: $w;
+  border: 2px solid $secondary;
+  box-shadow: 0 0 10px rgba($grey4, .7);
+  @media (max-width: $md) {
+    position: fixed;
+    z-index: 10;
+    top: 60px;
+    left: 0;
+    background: $w;
+    margin: 0;
+    width: 300px;
+    box-shadow: none;
+    overflow: scroll;
+    transform: translateX(-300px);
+    transition: .3s;
+    &.isOpen {
+      transform: translateX(0);
+      box-shadow: 0 0 10px rgba($grey4, .7);
+    }
+  }
+}
+
+.filterContainer {
+  font-size: 14px;
+  input {
+    display: none;
+  }
+  .areaTitle,
+  .statusTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 20px;
+    color: $secondary;
+    margin: 0 10px 10px 10px;
+  }
+  .areaTotal {
+    color: adjust-color($color: $secondary, $lightness: 10%, $alpha: 0.8);
+    font-size: 12px;
+    font-weight: 300;
+    .totalNum {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .areaBody {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    .far {
+      margin-right: 5px;
+    }
+    .eachAreaTitle {
+      margin-right: 15px;
+    }
+    .eachAreaCounts {
+      background-color: $primary;
+      border: 1px solid $primary;
+      color: $w;
+      font-style: normal;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+  .areaList {
+    width: 50%;
+  }
+  .statusBody {
+    padding: 5px;
+    display: flex;
+    text-align: center;
+  }
+  .statusList {
+    width: 50%;
+  }
+  .clearAllTagsContainer {
+    padding: 5px;
+    text-align: center;
+    border-top: 2px solid $secondary;
+    font-size: 16px;
+    transition: all .1s ease-in;
+    cursor: pointer;
+    &:hover {
+      background-color: $secondary;
+      color: $w;
+    }
+    &.disable {
+      cursor: not-allowed;
+      background-color: #F5F5F5;
+      color: #ACA899;
+    }
+    .clearTags {}
+  }
+}

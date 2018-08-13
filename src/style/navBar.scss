@@ -1,0 +1,39 @@
+@import './base/color';
+@import './base/app';
+#navBar {
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  height: 60px;
+  top: 0;
+  left: auto;
+  background-color: $nav;
+  color: $w;
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    input {
+      outline: none;
+      padding: 3px;
+      height: 25px;
+      width: 200px;
+      background: rgba($grey2, .5);
+      border: none;
+      border-bottom: 1px solid rgba($w, .5);
+      @media (max-width: $md) {
+        width: 120px;
+      }
+    }
+  }
+  .searchIcon {
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    font-size: 14px;
+  }
+}

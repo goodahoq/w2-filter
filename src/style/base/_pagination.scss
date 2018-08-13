@@ -1,0 +1,34 @@
+@import './color';
+#pagination {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  ul {
+    padding: 0px;
+  }
+  li {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: $w;
+    border: 1px solid $nav;
+    border-radius: 3px;
+    margin: 0 5px;
+    margin-bottom: 5px;
+    a {
+      display: block;
+      cursor: pointer;
+      height: 100%;
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 300;
+      color: $nav;
+    }
+    &.active {
+      background: $nav;
+      a {
+        color: $w;
+      }
+    }
+  }
+}

@@ -7,6 +7,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
+import {
+  store
+} from './store'
+
 import 'bootstrap/scss/bootstrap.scss'
 import 'bootstrap'
 
@@ -16,6 +20,8 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   render: h => h(App),
+  router,
+  store,
   components: {
     App
   },
