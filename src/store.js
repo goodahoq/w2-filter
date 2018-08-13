@@ -2,9 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 import axios from 'axios'
-import {
-  stat
-} from 'fs';
 
 export const store = new Vuex.Store({
   state: {
@@ -95,7 +92,8 @@ export const store = new Vuex.Store({
     rentableAmount: 1,
     returnable: false,
     returnableAmount: 1,
-
+    selectedStop: {},
+    isMapOpen: false
   },
   getters: {
     selectedTags: state => {
@@ -152,33 +150,48 @@ export const store = new Vuex.Store({
     'UPDATE_SEARCH_KEYWORD' (state, payload) {
       state.searchKeyword = payload
       state.pageData.currentPage = 1
+      state.isMapOpen = false
     },
     'CLEAR_SEARCH_KEYWORD' (state) {
       state.searchKeyword = ''
       state.pageData.currentPage = 1
+      state.isMapOpen = false
     },
     'CHANGE_PAGE' (state, payload) {
       state.pageData.currentPage = payload
       store.dispatch('scrollToTop')
+      state.isMapOpen = false
     },
     'UPDATE_FILTER_TAGS' (state, payload) {
       payload.isSelected = !payload.isSelected
       state.pageData.currentPage = 1
       store.dispatch('scrollToTop')
+      state.isMapOpen = false
     },
     'DELETE_TAG' (state, payload) {
       payload.isSelected = !payload.isSelected
       state.pageData.currentPage = 1
+      state.isMapOpen = false
     },
     'CLEAR_ALL_TAGS' (state) {
       state.areaList.forEach(ele => ele.isSelected = false)
       state.pageData.currentPage = 1
+      state.isMapOpen = false
     },
     'UPDATE_RENTABLE' (state) {
       state.rentable = !state.rentable
+      state.isMapOpen = false
     },
     'UPDATE_RETURNBLE' (state) {
       state.returnable = !state.returnable
+      state.isMapOpen = false
+    },
+    'SHOW_MAP' (state, payload) {
+      state.selectedStop = payload
+      state.isMapOpen = true
+    },
+    'CLOSE_MAP' (state) {
+      state.isMapOpen = false
     }
   },
   actions: {

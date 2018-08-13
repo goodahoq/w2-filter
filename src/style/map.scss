@@ -1,0 +1,110 @@
+@import './base/color';
+@import './base/app';
+.map-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .2s ease;
+}
+
+.mapWrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mapContainer {
+  width: 500px;
+  height: fit-content;
+  margin: 0px auto;
+  background-color: $grey1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .2s ease;
+  overflow-y: scroll;
+  border: 2px solid $secondary;
+  @media (max-width: $md) {
+    width: 300px;
+  }
+}
+
+.mapCloseBtn {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+  right: 2%;
+  top: 0;
+}
+
+.mapHeader {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-bottom: 2px solid $secondary;
+  .mapTitleBody {
+    .title {
+      font-size: 20px;
+    }
+    .title_en {
+      font-size: 12px;
+    }
+  }
+  .mapDistrictBody {
+    margin-top: 5px;
+    .district {
+      width: fit-content;
+      background-color: $primary;
+      border-radius: 4px;
+      color: $w;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 300;
+      .district_en {
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.mapCancel {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.googleMap {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  @media (max-width: $sm) {
+    width: 100%;
+    height: 300px;
+  }
+  @media (max-width: $xs) {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .map-container,
+.modal-leave-active .map-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

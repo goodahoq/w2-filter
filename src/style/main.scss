@@ -1,10 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import './base/color';
 @import './base/app';
 @import './navBar';
 @import './bikeCard';
+@import './map';
 @import './filterContainer';
 @import './base/pagination';
+body,
+html {
+  font-size: 18px;
+  color: $font;
+  background-color: $bg !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+  margin: 0 auto;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
 #homePage {
   margin-top: 60px;
   .homeContainer {

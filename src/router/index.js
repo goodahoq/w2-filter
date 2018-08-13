@@ -8,9 +8,11 @@ export default new Router({
   routes: [{
     path: '/',
     name: 'homePage',
-    component: homePage
+    component: homePage,
+
   }, {
     path: '*',
     redirect: '/'
-  }]
+  }],
+
 })

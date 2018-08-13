@@ -4,6 +4,7 @@
             filterPannel(:is-open = "showMobileMenu")
             .mobileMenuBtn(@click="updateMobileMenu" :class=`{ isOpen : showMobileMenu }`)
                 i.fas(:class=`showMobileMenu ? "fa-times" : "fa-bars" `)
+            map-modal
             .bikeCard-container.row
                 p.empty_text(v-if="filteredData.length == 0") 嘿～沒有腳踏車想讓你騎喔！
                 .filterTagContainer.col-md-12(v-if="filteredData.length != 0")
@@ -26,11 +27,12 @@
 import bikeCard from '@/components/bikeCard'
 import filterPannel from '@/components/filterPannel'
 import pagination from '@/components/pagination'
+import mapModal from '@/components/mapModal'
 import { mapGetters, mapMutations } from 'vuex'
 export default {
     name: "homePage",
     components: {
-        bikeCard, filterPannel, pagination
+        bikeCard, filterPannel, pagination, mapModal
     },
     data() {
         return {
